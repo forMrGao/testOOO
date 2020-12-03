@@ -38,7 +38,6 @@ jobs:
       - name: '运行 【中青看点自动阅读二】'
         if: env.YOUTH_READ2
         run: |
-          cd ~/Scripts
           node Corn/youth_read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
