@@ -18,4 +18,5 @@ jobs:
       - name: Checkout
         run: |
           git clone -b master https://github.com/lxk0301/jd_scripts.git ~/JavaScript
+          git init
           git log -10
