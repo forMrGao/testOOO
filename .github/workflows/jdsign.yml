@@ -20,9 +20,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/lxk0301/jd_scripts.git ~/JavaScript
-          git fetch --all
-          git reset --hard origin/master
+          git clone -b master https://github.com/lxk0301/jd_scripts.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
