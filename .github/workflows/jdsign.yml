@@ -18,9 +18,6 @@ jobs:
         JD_COOKIE: ${{ secrets.JD_COOKIE }}
       
     steps:
-      - name: Checkout
-        run: |
-          git clone -b master https://github.com/lxk0301/jd_scripts.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -34,7 +31,6 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/JavaScript
-          ls
           node jd_bean_sign.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
